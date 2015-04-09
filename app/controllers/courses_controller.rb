@@ -5,10 +5,10 @@ class CoursesController < ApplicationController
 		   @courses=@courses.where("name like?","%#{params[:name]}%")
 		end	
 		if params[:teacher].present?
-		   @courses=@courses.where("name like?","%#{params[:teacher]}%")
+		   @courses=@courses.where("teacher like?","%#{params[:teacher]}%")
 		end	
 		if params[:time].present?
-			@courses=@courses.where("name like?","%#{params[:time]}%")
+			@courses=@courses.where("time like?","%#{params[:time]}%")
 		end	
 	end	
 	def show
